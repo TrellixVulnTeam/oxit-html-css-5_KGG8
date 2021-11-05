@@ -1,0 +1,27 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+* {
+  font-family: Source Sans Pro;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+  background-image: url("../img/bg_home.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  // background-size: cover;
+
+  // background-size: contain, cover;
+  background-size: 100% 640px;
+
+  // background-size: cover;
+  // height: 800px;
+}
+
+.container {
+  max-width: 1194px;
+}
+
+@import "_fonts.scss";
+@import "_home.scss";
