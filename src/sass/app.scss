@@ -21,6 +21,7 @@ body {
 }
 
 .caption {
+  font-size: 36px;
   font-weight: 600;
   letter-spacing: 0.7px;
   color: #fff;
@@ -46,9 +47,12 @@ body {
 }
 
 hr {
-  background-color: #ededed;
+  background-color: black;
+  // background-color: #ededed;
 }
 
 @import "_fonts.scss";
 @import "_home.scss";
 @import "_features.scss";
+@import "_about-long.scss";
+@import "_about-short.scss";

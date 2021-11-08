@@ -1,0 +1,45 @@
+.about-short {
+  background-color: #f2f2f2;
+  padding-bottom: 33px;
+
+  .container {
+    padding-top: 35px;
+
+    .subtitle {
+      margin-top: 95px;
+      margin-bottom: 12px;
+    }
+
+    .caption {
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .description-text {
+      margin-top: 12px;
+    }
+
+    .devise {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .about-short {
+    .container {
+      padding-top: 30px;
+      padding-bottom: 0;
+      .col-sm-12 {
+        text-align: center;
+      }
+
+      .subtitle {
+        margin-top: 10px;
+      }
+    }
+  }
+}
