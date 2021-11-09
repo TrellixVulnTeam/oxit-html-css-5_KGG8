@@ -1,5 +1,6 @@
 header {
   transition: background-color 0.3s;
+  z-index: 7;
 }
 
 .home {
@@ -112,7 +113,7 @@ header {
     }
 
     &:hover {
-      color: #008ed6;
+      color: $primary;
     }
 
     &:focus {
@@ -124,7 +125,6 @@ header {
 @include media-breakpoint-down(md) {
   .home {
     .container:nth-child(2) {
-      // padding-top: 0;
       .subtitle,
       .caption,
       .description-text {
@@ -138,11 +138,10 @@ header {
       }
 
       .caption {
-        font-size: 28px;
+        font-size: 30px;
       }
 
       .description-text {
-        font-size: 16px;
         margin-bottom: 30px;
       }
 

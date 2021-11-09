@@ -1,0 +1,56 @@
+.price {
+  padding-bottom: 40px;
+  .container {
+    padding-top: 58px;
+    text-align: center;
+
+    .caption {
+      color: #1a1a1a;
+      margin-top: 11px;
+      margin-bottom: 14px;
+    }
+
+    .plan {
+      &-items {
+        padding-top: 60px;
+      }
+
+      &-item {
+        border: 1px solid #e0e0e0;
+        max-width: 272px;
+
+        hr {
+          margin: 0;
+        }
+      }
+
+      &-name {
+        margin: 25px auto 17px;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #1a1a1a;
+      }
+
+      &-price {
+        font-size: 56px;
+        font-weight: 600;
+        color: #1a1a1a;
+        // margin-top: 22px;
+        // margin-left: -8px;
+        margin: 22px 0 -15px -8px;
+        &::before {
+          content: "$";
+          font-size: 30px;
+          vertical-align: super;
+        }
+      }
+
+      &-per {
+        font-size: 18px;
+        color: #999999;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

@@ -23,20 +23,22 @@
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */
-      url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.woff2")
+    url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.woff2")
       format("woff2"),
-    /* Super Modern Browsers */
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.woff")
-      format("woff"),
-    /* Modern Browsers */
-      url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-regular.svg#SourceSansPro")
-      format("svg"); /* Legacy iOS */
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* source-sans-pro-italic - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-italic.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/Source Sans Pro/source-sans-pro-v14-latin-italic.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

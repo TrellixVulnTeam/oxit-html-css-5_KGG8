@@ -1,0 +1,46 @@
+.eye-cather {
+  background-color: #15141a;
+  .container {
+    min-height: 170px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+
+      span {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+    }
+    .btn:nth-child(1) {
+      margin: 0 16px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .eye-cather {
+    .container {
+      flex-wrap: wrap;
+      padding: 15px 12px;
+      h1 {
+        font-size: 30px;
+      }
+      .btn {
+        margin: 5px 8px;
+      }
+      .btn:nth-child(1) {
+        margin: 5px 8px;
+      }
+      justify-content: center;
+      text-align: center;
+      .buttoms {
+        // padding-bottom: 40px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
