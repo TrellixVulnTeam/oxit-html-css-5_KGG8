@@ -1,8 +1,13 @@
 $primary: #008ed6;
+$fa-font-path: "../fonts/font-awesome";
+
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "node_modules/swiper/swiper.scss";
 @import "node_modules/swiper/modules/pagination/pagination.scss";
 @import "node_modules/swiper/modules/autoplay/autoplay.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 
 * {
   font-family: Source Sans Pro;
@@ -63,3 +68,5 @@ hr {
 @import "_testimonials.scss";
 @import "_eye-cather.scss";
 @import "_price.scss";
+@import "_contact.scss";
+@import "_footer.scss";

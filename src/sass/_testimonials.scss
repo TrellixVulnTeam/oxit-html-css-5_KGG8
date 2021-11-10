@@ -36,40 +36,39 @@
       letter-spacing: 0.4px;
     }
   }
-}
+  .swiper-slide {
+    padding-top: 0;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 154px;
 
-.swiper-slide {
-  padding-top: 0;
-  color: #fff;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 154px;
-
-  blockquote {
-    font-size: 24px;
-    font-style: italic;
-    line-height: 1.4;
-    margin-bottom: 22px;
+    blockquote {
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.4;
+      margin-bottom: 22px;
+    }
   }
-}
 
-.swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-}
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
-  &-active {
-    width: 14px;
-    height: 14px;
-    background-color: #fff;
+    &-active {
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+    }
   }
 }
 

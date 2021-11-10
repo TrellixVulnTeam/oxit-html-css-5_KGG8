@@ -1,5 +1,5 @@
 .price {
-  padding-bottom: 40px;
+  padding-bottom: 57px;
   .container {
     padding-top: 58px;
     text-align: center;
@@ -13,43 +13,93 @@
     .plan {
       &-items {
         padding-top: 60px;
+        // gap: 27px;
       }
 
       &-item {
         border: 1px solid #e0e0e0;
-        max-width: 272px;
+        width: 272px !important;
+        align-items: center;
 
         hr {
           margin: 0;
+          width: inherit;
+        }
+
+        .btn {
+          width: 162px;
+          height: 52px;
+          color: $primary;
+          border: 1px solid #e0e0e0;
+          margin-bottom: 30px;
+        }
+
+        > div {
+          padding-top: 22px;
+          padding-bottom: 12px;
+          transition: background-color 0.15s;
+          border-top: 1px solid #e0e0e0;
+          border-bottom: 1px solid #e0e0e0;
+        }
+
+        &:hover {
+          .plan {
+            &-name {
+              color: $primary;
+            }
+
+            &-price,
+            &-per {
+              color: #fafafa;
+            }
+          }
+
+          > div {
+            background-color: $primary;
+            color: white;
+          }
+
+          .btn {
+            color: #fafafa;
+            background-color: $primary;
+          }
         }
       }
 
       &-name {
-        margin: 25px auto 17px;
         font-size: 24px;
         font-weight: 700;
-        text-transform: uppercase;
         color: #1a1a1a;
+        margin: 25px auto 17px;
+        text-transform: uppercase;
+        transition: color 0.15s;
       }
 
       &-price {
         font-size: 56px;
         font-weight: 600;
         color: #1a1a1a;
-        // margin-top: 22px;
-        // margin-left: -8px;
-        margin: 22px 0 -15px -8px;
+        margin: 0 0 -15px -8px;
         &::before {
           content: "$";
           font-size: 30px;
           vertical-align: super;
+          transition: color 0.15s;
         }
       }
 
       &-per {
         font-size: 18px;
+        color: #999;
+        margin-bottom: 20px;
+        transition: color 0.15s;
+      }
+
+      &-text {
+        font-size: 18px;
+        line-height: 26px;
         color: #999999;
-        margin-bottom: 32px;
+        margin: 45px 30px 40px;
       }
     }
   }

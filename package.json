@@ -38,5 +38,8 @@
     "posthtml-richtypo": "^1.0.2",
     "richtypo-rules-ru": "^4.0.9",
     "swiper": "^7.2.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
