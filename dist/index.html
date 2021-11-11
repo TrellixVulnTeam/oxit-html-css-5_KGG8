@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
-    <title>html-css №5</title>
+    <title>5 | html | css</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#nav">
     <section id="home" class="home">
         <header>
             <nav class="container navbar navbar-expand-md" id="nav">
@@ -20,7 +20,7 @@
                 <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="#home">Home</a>
@@ -45,7 +45,7 @@
             </nav>
         </header>
 
-        <div class="container">
+        <div class="container content">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <h3 class="subtitle">introducing lucid theme</h3>
@@ -55,15 +55,15 @@
                         at elementum magna ultricies accumsan. Cras venenatis lacus sed dolor
                         placerat tempus. Morbi blandit at neque ut imperdiet.
                     </p>
-                    <div class="buttoms pb-3">
+                    <div class="buttons pb-3">
                         <button type="button" class="btn btn-primary">download now</button>
                         <button type="button" class="btn btn-outline-light ms-3">
                             view features
                         </button>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 devise">
-                    <img src="img/home_phone.png" alt="devise" class="img-fluid">
+                <div class="col-md-6 col-sm-12 device">
+                    <img src="img/home_phone.png" alt="phone" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -76,8 +76,8 @@
                 <h2 class="caption">List of amazing features</h2>
                 <img src="img/double_line.png" alt="_ _">
             </div>
-            <div class="col-12 feature-items row">
-                <div class="feature-item col-md-6 col-sm-12 col-lg-3">
+            <div class="feature-items row">
+                <div class="feature-item col-md-6 col-sm-12 col-lg-3 p-0">
                     <div class="feature-item-img">
                         <img src="img/monitor.png" alt="monitor" class="img-fluid">
                     </div>
@@ -88,9 +88,9 @@
                         ipsum lacinia consectetur.
                     </p>
                 </div>
-                <div class="feature-item col-md-6 col-sm-12 col-lg-3">
+                <div class="feature-item col-md-6 col-sm-12 col-lg-3 p-0">
                     <div class="feature-item-img">
-                        <img src="img/settings.png" alt="monitor" class="img-fluid">
+                        <img src="img/settings.png" alt="settings" class="img-fluid">
                     </div>
                     <h3 class="feature-item-title">Customizable</h3>
                     <p class="feature-item-text">
@@ -98,9 +98,9 @@
                         ipsum lacinia consectetur.
                     </p>
                 </div>
-                <div class="feature-item col-md-6 col-sm-12 col-lg-3">
+                <div class="feature-item col-md-6 col-sm-12 col-lg-3 p-0">
                     <div class="feature-item-img">
-                        <img src="img/like.png" alt="monitor" class="img-fluid">
+                        <img src="img/like.png" alt="like" class="img-fluid">
                     </div>
                     <h3 class="feature-item-title">Lovely design</h3>
                     <p class="feature-item-text">
@@ -108,9 +108,9 @@
                         ipsum lacinia consectetur.
                     </p>
                 </div>
-                <div class="feature-item col-md-6 col-sm-12 col-lg-3">
+                <div class="feature-item col-md-6 col-sm-12 col-lg-3 p-0">
                     <div class="feature-item-img">
-                        <img src="img/phone.png" alt="monitor" class="img-fluid">
+                        <img src="img/phone.png" alt="phone" class="img-fluid">
                     </div>
                     <h3 class="feature-item-title">Mobile Friendly</h3>
                     <p class="feature-item-text">
@@ -126,10 +126,10 @@
     <section id="about" class="about-long">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-12 devise">
-                    <img src="img/about_long_phone.png" alt="devise" class="img-fluid">
+                <div class="col-md-6 col-sm-12 device">
+                    <img src="img/about_long_phone.png" alt="phone" class="img-fluid">
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 content">
                     <h3 class="subtitle">dip into the details</h3>
                     <h2 class="caption">Beautiful on every device</h2>
                     <img src="img/double_line.png" alt="_ _">
@@ -138,7 +138,7 @@
                         accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare
                         odio. Sed non mauris vitae erat consequat auctor eu in elit.
                     </p>
-                    <ul class="list">
+                    <ul class="list p-0">
                         <li><img src="img/cup.png" alt="cup">Awesome design</li>
                         <li><img src="img/mouse.png" alt="mouse">Fully responsive</li>
                         <li><img src="img/energy.png" alt="energy">Retina ready</li>
@@ -152,10 +152,10 @@
     <section class="about-short">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 col-sm-12">
+                <div class="col-md-5 col-sm-12 content">
                     <h3 class="subtitle">dip into the details</h3>
                     <h2 class="caption">Super easy to customize</h2>
-                    <img src="img/double_line.png" alt="_ _" width="42px" height="2px">
+                    <img src="img/double_line.png" alt="_ _" width="42" height="2">
                     <p class="description-text">
                         Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
                         accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare
@@ -165,7 +165,7 @@
                     </p>
                 </div>
                 <div class="col-md-7 col-sm-12 p-0 devise">
-                    <img src="img/about_short_phone.png" alt="devise" class="img-fluid">
+                    <img src="img/about_short_phone.png" alt="device" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -173,12 +173,12 @@
 
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="col-12 d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center">
                 <h3 class="subtitle">quality has its price</h3>
                 <h2 class="caption">Pricings & Plans</h2>
-                <img src="img/double_line.png" alt="_ _" width="42px" height="2px">
+                <img src="img/double_line.png" alt="_ _" width="42" height="2">
             </div>
-            <div class="col-12 swiper reviews">
+            <div class="swiper reviews">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <blockquote>
@@ -187,21 +187,21 @@
                             you,” said they to the Sea.
                         </blockquote>
                         <div class="autor d-flex">
-                            <img src="img/Joch_Doe.png" alt="Joch Doe" title="Joch Doe" width="59px" height="59px">
+                            <img src="img/Joch_Doe.png" alt="Joch Doe" title="Joch Doe" width="59" height="59">
                             <div class="autor-about">
                                 <p class="autor-name">John Doe</p>
                                 <p class="autor-post">CEO, THE RIVERS COMPANY</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide d-flex">
+                    <div class="swiper-slide">
                         <blockquote>
                             A shoe is not only a design, but it's a part of your body language,
                             the way you walk. The way you're going to move is quite dictated by
                             your shoes.
                         </blockquote>
                         <div class="autor d-flex">
-                            <img src="img/Dean_Winchester.png" alt="Dean Winchester" title="Dean Winchester" width="59px" height="59px">
+                            <img src="img/Dean_Winchester.png" alt="Dean Winchester" title="Dean Winchester" width="59" height="59">
                             <div class="autor-about">
                                 <p class="autor-name">Dean Winchester</p>
                                 <p class="autor-post">UX DESIGNER, GOOGLE INC.</p>
@@ -215,21 +215,21 @@
                             you,” said they to the Sea.
                         </blockquote>
                         <div class="autor d-flex">
-                            <img src="img/Joch_Doe.png" alt="Joch Doe" title="Joch Doe" width="59px" height="59px">
+                            <img src="img/Joch_Doe.png" alt="Joch Doe" title="Joch Doe" width="59" height="59">
                             <div class="autor-about">
                                 <p class="autor-name">John Doe</p>
                                 <p class="autor-post">CEO, THE RIVERS COMPANY</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide d-flex">
+                    <div class="swiper-slide">
                         <blockquote>
                             A shoe is not only a design, but it's a part of your body language,
                             the way you walk. The way you're going to move is quite dictated by
                             your shoes.
                         </blockquote>
                         <div class="autor d-flex">
-                            <img src="img/Dean_Winchester.png" alt="Dean Winchester" title="Dean Winchester" width="59px" height="59px">
+                            <img src="img/Dean_Winchester.png" alt="Dean Winchester" title="Dean Winchester" width="59" height="59">
                             <div class="autor-about">
                                 <p class="autor-name">Dean Winchester</p>
                                 <p class="autor-post">UX DESIGNER, GOOGLE INC.</p>
@@ -243,9 +243,9 @@
     </section>
 
     <section class="eye-cather">
-        <div class="container d-flex col-12">
+        <div class="container d-flex">
             <h1><span>Like what you see?</span> Get this great theme now!</h1>
-            <div class="buttoms">
+            <div class="buttons">
                 <button type="button" class="btn btn-outline-light">view features</button>
                 <button type="button" class="btn btn-primary">download now</button>
             </div>
@@ -321,18 +321,18 @@
             <div class="col-12 d-flex flex-column align-items-center">
                 <h3 class="subtitle">stay in touch</h3>
                 <h2 class="caption">Contact us</h2>
-                <img src="img/double_line.png" alt="_ _" width="42px" height="2px">
+                <img src="img/double_line.png" alt="_ _" width="42" height="2">
             </div>
             <div class="col-12 con-items">
                 <div class="col-lg-4 con-item">
-                    <img src="img/phone.png" alt="" width="32px" height="32px">
+                    <img src="img/phone.png" alt="" width="32" height="32">
                     <p>
                         Phone: (415) 124-5678<br>
                         Fax: (412) 123-8290
                     </p>
                 </div>
                 <div class="col-lg-4 con-item">
-                    <img src="img/pointer.png" alt="" width="32px" height="32px">
+                    <img src="img/pointer.png" alt="" width="32" height="32">
                     <p>
                         1001 Brickell Bay Dr.<br>
 
@@ -341,12 +341,12 @@
                     </p>
                 </div>
                 <div class="col-lg-4 con-item">
-                    <img src="img/envelope.png" alt="" width="32px" height="32px">
+                    <img src="img/envelope.png" alt="" width="32" height="32">
                     <p>support@yourname.com</p>
                 </div>
             </div>
 
-            <form class="form" action="">
+            <form class="form">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 form-group">
                         <input class="form-control" type="text" id="name" placeholder="name  *">
@@ -366,9 +366,9 @@
         </div>
     </section>
 
-    <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.1958782683579!2d-80.18968823559639!3d25.763609707445045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7ed0f7e1d0d%3A0x1b14efe054fff6dc!2sBPM%20units%20llc!5e0!3m2!1suk!2sua!4v1636549507084!5m2!1suk!2sua" width="100%" height="370" style="border: 0; display: block" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.1958782683579!2d-80.18968823559639!3d25.763609707445045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7ed0f7e1d0d%3A0x1b14efe054fff6dc!2sBPM%20units%20llc!5e0!3m2!1suk!2sua!4v1636549507084!5m2!1suk!2sua" height="370" style="border: 0; display: block; width: 100%" allowfullscreen="" loading="lazy"></iframe>
+
 
     <footer class="footer">
         <ul class="social">

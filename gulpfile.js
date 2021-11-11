@@ -1,65 +1,65 @@
-'use strict';
+"use strict";
 
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify-es').default;
-const sass = require('gulp-sass')(require('node-sass'));
-const del = require('del');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const postcss = require('gulp-postcss');
-const babel = require('gulp-babel');
-const browserSync = require('browser-sync').create();
-const changed = require('gulp-changed');
-const prettier = require('gulp-prettier');
-const beautify = require('gulp-jsbeautifier');
-const sourcemaps = require('gulp-sourcemaps');
-const hash_src = require('gulp-hash-src');
-const posthtml = require('gulp-posthtml');
-const svgSprite = require('gulp-svg-sprite');
-const include = require('posthtml-include');
-const richtypo = require('posthtml-richtypo');
-const expressions = require('posthtml-expressions');
-const removeAttributes = require('posthtml-remove-attributes');
-const removeHtmlComments = require('gulp-remove-html-comments');
-const htmlBeautify = require('gulp-html-beautify');
-const { quotes, sectionSigns, shortWords } = require('richtypo-rules-ru');
+const gulp = require("gulp");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify-es").default;
+const sass = require("gulp-sass")(require("node-sass"));
+const del = require("del");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postcss = require("gulp-postcss");
+const babel = require("gulp-babel");
+const browserSync = require("browser-sync").create();
+const changed = require("gulp-changed");
+const prettier = require("gulp-prettier");
+const beautify = require("gulp-jsbeautifier");
+const sourcemaps = require("gulp-sourcemaps");
+const hash_src = require("gulp-hash-src");
+const posthtml = require("gulp-posthtml");
+const svgSprite = require("gulp-svg-sprite");
+const include = require("posthtml-include");
+const richtypo = require("posthtml-richtypo");
+const expressions = require("posthtml-expressions");
+const removeAttributes = require("posthtml-remove-attributes");
+const removeHtmlComments = require("gulp-remove-html-comments");
+const htmlBeautify = require("gulp-html-beautify");
+const { quotes, sectionSigns, shortWords } = require("richtypo-rules-ru");
 
 /**
  * Основные переменные
  */
 const paths = {
-  dist: './dist',
-  src: './src',
-  maps: './maps',
+  dist: "./dist",
+  src: "./src",
+  maps: "./maps",
 };
 const src = {
-  html: paths.src + '/pages/*.html',
-  templates: paths.src + '/templates/**/*.html',
-  img: paths.src + '/img/**/*.*',
-  css: paths.src + '/css',
-  scss: paths.src + '/sass',
-  js: paths.src + '/js',
-  fonts: paths.src + '/fonts',
-  public: paths.src + '/public',
-  svg: paths.src + '/svg/*.*',
+  html: paths.src + "/pages/*.html",
+  templates: paths.src + "/templates/**/*.html",
+  img: paths.src + "/img/**/*.*",
+  css: paths.src + "/css",
+  scss: paths.src + "/sass",
+  js: paths.src + "/js",
+  fonts: paths.src + "/fonts",
+  public: paths.src + "/public",
+  svg: paths.src + "/svg/*.*",
 };
 const dist = {
-  img: paths.dist + '/img/',
-  css: paths.dist + '/css/',
-  js: paths.dist + '/js/',
-  fonts: paths.dist + '/fonts/',
+  img: paths.dist + "/img/",
+  css: paths.dist + "/css/",
+  js: paths.dist + "/js/",
+  fonts: paths.dist + "/fonts/",
 };
 const externalFonts = [
   {
-    src: 'node_modules/@fortawesome/fontawesome-free/webfonts/*',
-    dist: 'font-awesome',
+    src: "node_modules/@fortawesome/fontawesome-free/webfonts/*",
+    dist: "font-awesome",
   },
 ];
 const externalJs = [
-  'node_modules/jquery/dist/jquery.min.js',
-  'node_modules/swiper/swiper-bundle.min.js',
-  'node_modules/bootstrap/dist/js/bootstrap.min.js',
+  "node_modules/jquery/dist/jquery.min.js",
+  "node_modules/swiper/swiper-bundle.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js",
 ];
 
 /**
@@ -74,7 +74,7 @@ const arg = ((argList) => {
     curOpt;
   for (a = 0; a < argList.length; a++) {
     thisOpt = argList[a].trim();
-    opt = thisOpt.replace(/^\-+/, '');
+    opt = thisOpt.replace(/^\-+/, "");
 
     if (opt === thisOpt) {
       // argument value
@@ -107,9 +107,9 @@ function browserSyncInit(done) {
     server: {
       baseDir: paths.dist,
     },
-    host: 'localhost',
+    host: "localhost",
     port: 9000,
-    logPrefix: 'log',
+    logPrefix: "log",
   });
   done();
 }
@@ -129,9 +129,9 @@ function browserSyncReload(done) {
  */
 function copyFonts() {
   externalFonts.forEach((extFont) => {
-    gulp.src(extFont.src).pipe(gulp.dest(dist.fonts + '/' + extFont.dist));
+    gulp.src(extFont.src).pipe(gulp.dest(dist.fonts + "/" + extFont.dist));
   });
-  return gulp.src([src.fonts + '/**/*']).pipe(gulp.dest(dist.fonts));
+  return gulp.src([src.fonts + "/**/*"]).pipe(gulp.dest(dist.fonts));
 }
 
 /**
@@ -146,14 +146,14 @@ function htmlProcess() {
         include(),
         expressions({ removeScriptLocals: true }),
         richtypo({
-          attribute: 'data-typo',
+          attribute: "data-typo",
           rules: [quotes, sectionSigns, shortWords],
         }),
         removeAttributes([
           // The only non-array argument is also possible
-          'data-typo',
+          "data-typo",
         ]),
-      ]),
+      ])
     )
     .pipe(removeHtmlComments())
     .pipe(htmlBeautify({ indentSize: 2 }))
@@ -166,20 +166,20 @@ function htmlProcess() {
  */
 function hashProcess() {
   return gulp
-    .src(paths.dist + '/*.html')
+    .src(paths.dist + "/*.html")
     .pipe(
       hash_src({
         build_dir: paths.dist,
-        src_path: paths.dist + '/js',
-        exts: ['.js'],
-      }),
+        src_path: paths.dist + "/js",
+        exts: [".js"],
+      })
     )
     .pipe(
       hash_src({
-        build_dir: './dist',
-        src_path: paths.dist + '/css',
-        exts: ['.css'],
-      }),
+        build_dir: "./dist",
+        src_path: paths.dist + "/css",
+        exts: [".css"],
+      })
     )
     .pipe(gulp.dest(paths.dist));
 }
@@ -198,14 +198,14 @@ function imgProcess() {
  */
 function cssProcess() {
   let plugins;
-  if (arg.prod === 'true') {
+  if (arg.prod === "true") {
     plugins = [autoprefixer(), cssnano()];
   } else {
     plugins = [];
   }
   return gulp
-    .src([src.css + '/**/*.*'])
-    .pipe(concat('libs.min.css'))
+    .src([src.css + "/**/*.*"])
+    .pipe(concat("libs.min.css"))
     .pipe(postcss(plugins))
     .pipe(gulp.dest(dist.css));
 }
@@ -217,16 +217,16 @@ function cssProcess() {
  */
 function scssProcess() {
   const plugins = [autoprefixer({ grid: true })];
-  if (arg.prod === 'true') {
+  if (arg.prod === "true") {
     return gulp
-      .src([src.scss + '/app.scss'])
+      .src([src.scss + "/app.scss"])
       .pipe(sass())
       .pipe(postcss(plugins))
       .pipe(prettier())
       .pipe(gulp.dest(dist.css));
   } else {
     return gulp
-      .src([src.scss + '/app.scss'])
+      .src([src.scss + "/app.scss"])
       .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(postcss(plugins))
@@ -241,8 +241,8 @@ function scssProcess() {
  */
 function libsJsProcess() {
   return gulp
-    .src([src.js + '/!(app)*.js'].concat(externalJs))
-    .pipe(concat('libs.min.js'))
+    .src([src.js + "/!(app)*.js"].concat(externalJs))
+    .pipe(concat("libs.min.js"))
     .pipe(babel({ compact: true }))
     .pipe(uglify({ output: { quote_keys: true, ascii_only: true } }))
     .pipe(gulp.dest(dist.js));
@@ -253,16 +253,16 @@ function libsJsProcess() {
  * @returns {*}
  */
 function jsProcess() {
-  if (arg.prod === 'true') {
+  if (arg.prod === "true") {
     return gulp
-      .src([src.js + '/app.js'])
+      .src([src.js + "/app.js"])
       .pipe(beautify())
       .pipe(babel())
       .pipe(prettier())
       .pipe(gulp.dest(dist.js));
   } else {
     return gulp
-      .src([src.js + '/app.js'])
+      .src([src.js + "/app.js"])
       .pipe(babel())
       .pipe(gulp.dest(dist.js));
   }
@@ -279,10 +279,10 @@ function SVGProcess() {
       svgSprite({
         mode: {
           symbol: {
-            sprite: '../sprite.svg',
+            sprite: "../sprite.svg",
           },
         },
-      }),
+      })
     )
     .pipe(gulp.dest(dist.img));
 }
@@ -293,7 +293,7 @@ function SVGProcess() {
  */
 function publicProcess() {
   return gulp
-    .src([src.public + '/**/*.*', src.public + '/**/.*'])
+    .src([src.public + "/**/*.*", src.public + "/**/.*"])
     .pipe(gulp.dest(paths.dist));
 }
 
@@ -304,12 +304,12 @@ function watchFiles() {
   gulp.watch(src.html, gulp.series(htmlProcess, browserSyncReload));
   gulp.watch(src.templates, gulp.series(htmlProcess, browserSyncReload));
   gulp.watch(src.css, gulp.series(cssProcess, browserSyncReload));
-  gulp.watch(src.scss + '/**/*.*', gulp.series(scssProcess, browserSyncReload));
+  gulp.watch(src.scss + "/**/*.*", gulp.series(scssProcess, browserSyncReload));
   gulp.watch(
-    src.js + '/!(app)*.js',
-    gulp.series(libsJsProcess, browserSyncReload),
+    src.js + "/!(app)*.js",
+    gulp.series(libsJsProcess, browserSyncReload)
   );
-  gulp.watch(src.js + '/app.js', gulp.series(jsProcess, browserSyncReload));
+  gulp.watch(src.js + "/app.js", gulp.series(jsProcess, browserSyncReload));
   gulp.watch(src.img, gulp.series(imgProcess, browserSyncReload));
   gulp.watch(src.svg, gulp.series(SVGProcess, browserSyncReload));
   gulp.watch(src.fonts, gulp.series(copyFonts, browserSyncReload));
@@ -327,9 +327,9 @@ const build = gulp.series(
     scssProcess,
     imgProcess,
     copyFonts,
-    publicProcess,
+    publicProcess
   ),
-  hashProcess,
+  hashProcess
 );
 
 const watch = gulp.parallel(gulp.series(build, browserSyncInit), watchFiles);

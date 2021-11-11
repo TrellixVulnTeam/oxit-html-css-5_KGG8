@@ -4,6 +4,7 @@ $fa-font-path: "../fonts/font-awesome";
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "node_modules/swiper/swiper.scss";
 @import "node_modules/swiper/modules/pagination/pagination.scss";
+@import "node_modules/swiper/modules/navigation/navigation.scss";
 @import "node_modules/swiper/modules/autoplay/autoplay.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
@@ -13,9 +14,13 @@ $fa-font-path: "../fonts/font-awesome";
   font-family: Source Sans Pro;
 }
 
+html {
+  scroll-padding-top: 61px;
+}
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .container {
@@ -23,24 +28,24 @@ body {
 }
 
 .subtitle {
+  color: $primary;
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1.7px;
-  color: $primary;
+  text-transform: uppercase;
 }
 
 .caption {
+  color: #fff;
   font-size: 36px;
   font-weight: 600;
-  letter-spacing: 0.7px;
-  color: #fff;
+  letter-spacing: 0.6px;
 }
 
 .description-text {
+  color: #999;
   font-size: 18px;
   line-height: 26px;
-  color: #999;
 }
 
 .btn {

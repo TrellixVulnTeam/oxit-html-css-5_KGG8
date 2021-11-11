@@ -1,14 +1,16 @@
 .eye-cather {
   background-color: #15141a;
+
   .container {
-    min-height: 170px;
     margin: 0 auto;
+    min-height: 170px;
     align-items: center;
     justify-content: space-between;
+
     h1 {
       font-size: 36px;
-      letter-spacing: -0.5px;
       color: #ffffff;
+      letter-spacing: -0.5px;
 
       span {
         font-weight: 600;
@@ -33,12 +35,11 @@
         margin: 5px 8px;
       }
       .btn:nth-child(1) {
-        margin: 5px 8px;
+        margin: 5px 16px;
       }
       justify-content: center;
       text-align: center;
-      .buttoms {
-        // padding-bottom: 40px;
+      .buttons {
         flex-wrap: wrap;
       }
     }
