@@ -17,8 +17,10 @@
         letter-spacing: 0.5px;
       }
     }
-    .btn:nth-child(1) {
+    .btn:first-child {
+      padding: 15px;
       margin: 0 16px;
+      letter-spacing: 0.5px;
     }
   }
 }

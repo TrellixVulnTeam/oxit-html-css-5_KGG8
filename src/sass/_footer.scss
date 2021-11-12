@@ -1,12 +1,14 @@
 .footer {
-  background-color: #15141a;
   text-align: center;
+  background-color: #15141a;
+  padding: 51px 0 40px;
+
   .social {
     list-style: none;
-    padding-top: 51px;
     word-spacing: 21px;
     font-size: 20px;
     padding-right: 29px;
+
     > li {
       display: inline;
 
@@ -21,14 +23,14 @@
       }
     }
   }
+
   .text-copyright {
     margin: 0;
     font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
     color: #444348;
-    padding-bottom: 40px;
-    padding-top: 2px;
+    font-weight: 600;
+    padding: 2px 0 0;
     letter-spacing: 0.2px;
+    text-transform: uppercase;
   }
 }

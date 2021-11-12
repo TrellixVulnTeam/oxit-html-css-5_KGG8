@@ -1,7 +1,6 @@
 .price {
-  padding-bottom: 57px;
+  padding: 58px 0;
   .container {
-    padding-top: 58px;
     text-align: center;
 
     .caption {
@@ -13,7 +12,7 @@
     .plan {
       &-items {
         padding-top: 60px;
-        // gap: 27px;
+        min-width: 0;
       }
 
       &-item {

@@ -13095,6 +13095,10 @@ header {
     display: flex;
     justify-content: center; } }
 
+.ghost {
+  height: 62px;
+  display: none; }
+
 .features {
   padding: 60px 0 40px;
   text-align: center; }
@@ -13117,7 +13121,10 @@ header {
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      border: 1px solid #e0e0e0; }
+      border: 1px solid #e0e0e0;
+      transition: border-color 0.3s; }
+      .features .feature-item-img:hover {
+        border-color: #008ed6; }
     .features .feature-item-title {
       color: #1a1a1a;
       font-size: 24px;
@@ -13282,8 +13289,10 @@ header {
       .eye-cather .container h1 span, .eye-cather .container .h1 span {
         font-weight: 600;
         letter-spacing: 0.5px; }
-    .eye-cather .container .btn:nth-child(1) {
-      margin: 0 16px; }
+    .eye-cather .container .btn:first-child {
+      padding: 15px;
+      margin: 0 16px;
+      letter-spacing: 0.5px; }
 
 @media (max-width: 1050px) {
   .eye-cather .container {
@@ -13301,16 +13310,16 @@ header {
       flex-wrap: wrap; } }
 
 .price {
-  padding-bottom: 57px; }
+  padding: 58px 0; }
   .price .container {
-    padding-top: 58px;
     text-align: center; }
     .price .container .caption {
       color: #1a1a1a;
       margin-top: 11px;
       margin-bottom: 14px; }
     .price .container .plan-items {
-      padding-top: 60px; }
+      padding-top: 60px;
+      min-width: 0; }
     .price .container .plan-item {
       border: 1px solid #e0e0e0;
       width: 272px !important;
@@ -13461,11 +13470,11 @@ header {
       font-weight: 700; } }
 
 .footer {
+  text-align: center;
   background-color: #15141a;
-  text-align: center; }
+  padding: 51px 0 40px; }
   .footer .social {
     list-style: none;
-    padding-top: 51px;
     word-spacing: 21px;
     font-size: 20px;
     padding-right: 29px; }
@@ -13480,11 +13489,10 @@ header {
   .footer .text-copyright {
     margin: 0;
     font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
     color: #444348;
-    padding-bottom: 40px;
-    padding-top: 2px;
-    letter-spacing: 0.2px; }
+    font-weight: 600;
+    padding: 2px 0 0;
+    letter-spacing: 0.2px;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=maps/app.css.map */

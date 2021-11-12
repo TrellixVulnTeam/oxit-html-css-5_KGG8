@@ -1,32 +1,49 @@
-let scrollspy = new bootstrap.ScrollSpy(document.body, {
-  target: "#nav",
-  offset: $("header").height() + 1
-});
-$(document).on("scroll", function () {
-  let scrollTop = $(window).scrollTop();
-  let h = $("header").height();
-
-  if (scrollTop >= 19) {
-    $("header").addClass("navbar-fix");
-    $(".home .container:nth-child(2)").css({
-      "padding-top": h + 40 + "px"
-    });
-  } else {
-    $("header").removeClass("navbar-fix");
-    $(".home .container:nth-child(2)").css({
-      "padding-top": "40px"
-    });
-  }
-});
 $(function () {
+  let header = $("header");
+  let ghost = $(".ghost");
+  let headerHeight = header.outerHeight();
+  new bootstrap.ScrollSpy(document.body, {
+    target: "#nav",
+    offset: headerHeight + 1
+  });
+  $(document).on("scroll", function () {
+    let scrollTop = $(window).scrollTop();
+    headerNav.collapse("hide");
+
+    if (scrollTop >= 19) {
+      ghost.css({
+        display: "inherit",
+        height: header.outerHeight()
+      });
+      header.addClass("navbar-fix");
+    } else {
+      ghost.css({
+        display: "none",
+        height: header.outerHeight()
+      });
+      header.removeClass("navbar-fix");
+    }
+  });
   let headerNav = $("#navbarNav");
   headerNav.find('.nav-link[href^="#"]').on("click", function (e) {
+    e.preventDefault();
     headerNav.collapse("hide");
+    let elem = $(e.target.getAttribute("href")).get(0);
+    let y = elem.getBoundingClientRect().top + window.pageYOffset;
+
+    if (!header.hasClass("navbar-fix")) {
+      y -= header.outerHeight();
+    } else {
+      y -= headerHeight;
+    }
+
+    window.scroll(0, y);
   });
   let reviews = new Swiper(".testimonials .swiper", {
+    loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true,
+    grabCursor: true,
     pagination: {
       el: ".testimonials .swiper-pagination",
       clickable: true
@@ -42,24 +59,13 @@ $(function () {
     }
   });
   let plans = new Swiper(".price .swiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".price .swiper-pagination",
-      clickable: true
-    },
+    grabCursor: true,
+    spaceBetween: 27,
+    slidesPerView: "auto",
+    centeredSlides: true,
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 25
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      576: {
-        slidesPerView: 1,
-        spaceBetween: 10
+      769: {
+        centeredSlides: false
       }
     }
   });
